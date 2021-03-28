@@ -11,6 +11,12 @@ def index():
     return render_template('index.html', segment='index')
 
 
+@blueprint.route("/face_add")
+@login_required
+def face_add():
+    pass
+
+
 @blueprint.route('/<template>')
 @login_required
 def route_template(template):
@@ -35,12 +41,9 @@ def route_template(template):
 # Helper - Extract current page name from request
 def get_segment(request):
     try:
-
         segment = request.path.split('/')[-1]
-
         if segment == '':
             segment = 'index'
-
         return segment
 
     except:

@@ -14,12 +14,12 @@
             <div class="card bg-secondary border-0 mb-0">
                 <div class="card-body px-lg-5 py-lg-5 text-center">
                     {% include 'includes/flash_message.html' %}
-
                     <h3 class="mb-4 text-center">Login</h3>
-
                     <span class="mb-0 text-muted text-center">
                   {% if msg %}
+                        <div class="alert alert-warning" role="alert">
                       {{ msg | safe }}
+                        </div>
                   {% else %}
                       Add your credentials
                   {% endif %} 
@@ -46,7 +46,7 @@
                                 <label for="checkbox-fill-a1" class="cr"> Save Details</label>
                             </div>
                         </div>
-<!--                        <button type="submit" name="login" class="btn btn-primary shadow-2 mb-4">Login</button>-->
+                        <!--                        <button type="submit" name="login" class="btn btn-primary shadow-2 mb-4">Login</button>-->
                         {{ form.login(class = "btn btn-primary shadow-2 mb-4", type = "submit") }}
                     </form>
 
