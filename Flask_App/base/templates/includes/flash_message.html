@@ -1,0 +1,13 @@
+<!--Flash Mesaj Yeri -->
+<div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div id="userInformation" class="alert alert-{{ category }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+</div>
+<!-- Flash Mesaj Yeri Sonu -->
